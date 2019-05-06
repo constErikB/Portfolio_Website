@@ -1,0 +1,245 @@
+@import "config";
+@import "utilities";
+@import "_item_grid";
+
+// General Styles
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Dosis", sans-serif;
+  line-height: 1.6;
+  background: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: $dark-color;
+}
+
+ul {
+  list-style: none;
+}
+
+h2,
+h3,
+h4 {
+  text-transform: uppercase;
+}
+
+img {
+  width: 100%;
+}
+
+// Logo
+
+#logo {
+  width: 50px;
+  height: 50px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+// Main Nav
+
+#main-nav {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+
+  ul {
+    display: flex;
+  }
+
+  li {
+    padding: 1rem 1.5rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    border-bottom: 3px transparent solid;
+    padding-bottom: 0.5rem;
+    transition: border-color 0.5s;
+
+    &:hover {
+      border-color: $medium-color;
+    }
+
+    &.current {
+      border-color: $main-color;
+    }
+  }
+}
+
+// Header
+
+#header {
+  // Header Home
+  &-home {
+    background: $bg-image no-repeat center right / cover;
+    height: 100vh;
+    color: #fff;
+    font-weight: bold;
+
+    // Showcase Buttons
+
+    .showcase-buttons {
+      height: 295px;
+      padding-top: 10rem;
+      text-align: center;
+
+      li {
+        padding-top: 1rem;
+        position: relative;
+
+        i {
+          font-size: 1rem;
+        }
+
+        span {
+          font-family: "Dosis", sans-serif;
+          font-size: 1rem;
+          font-weight: bold;
+        }
+      }
+
+      a {
+        color: $light-color;
+        letter-spacing: 0.25rem;
+        transition: 0.5s;
+
+        &:hover {
+          border-bottom: 1px solid;
+          color: $main-color;
+          background: $medium-color;
+          padding: 12px;
+          border-radius: 5px;
+        }
+      }
+    }
+
+    // Header Content
+    .header-content {
+      text-align: center;
+      padding-top: 20%;
+
+      h1 {
+        font-size: 4rem;
+        line-height: 1.2;
+      }
+    }
+  }
+}
+
+// About
+
+#about {
+  &-a {
+    display: flex;
+    height: 500px;
+    padding: 0;
+    div {
+      flex: 1;
+    }
+    .about-img {
+      background: url("../img/domore.jpg") no-repeat center center/cover;
+    }
+    .about-text {
+      margin-top: 3rem;
+      padding: 0 1rem 1rem 1rem;
+
+      p {
+        font-size: 1.75rem;
+      }
+    }
+  }
+}
+
+// Home Sections
+
+#home {
+  &-b {
+    .specials {
+      margin-top: 3rem;
+      display: grid;
+      grid-gap: 1rem;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .fab {
+      color: $main-color;
+      padding-bottom: 0.4rem;
+    }
+  }
+}
+
+// Contact
+
+#contact {
+  display: flex;
+  .map {
+    flex: 1;
+  }
+
+  .contact-form {
+    flex: 1;
+    padding: 2rem;
+    .form-group {
+      margin: 0.075rem;
+    }
+
+    label {
+      display: block;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.5rem;
+    }
+
+    textarea {
+      width: 100%;
+      padding: 0.5rem;
+    }
+  }
+}
+
+// Footer
+
+#main-footer {
+  background: $dark-color;
+  color: #fff;
+  height: 5rem;
+
+  a {
+    color: #fff;
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    height: 5rem;
+    align-items: center;
+
+    .social .fab {
+      margin-right: 1rem;
+      border: 2px #fff solid;
+      border-radius: 50%;
+      height: 20px;
+      width: 20px;
+      line-height: 20px;
+      text-align: center;
+      padding: 0.5rem;
+
+      &:hover {
+        background: $main-color;
+      }
+    }
+  }
+}
+
+@import "media";
