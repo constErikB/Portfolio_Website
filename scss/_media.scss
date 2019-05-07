@@ -5,10 +5,33 @@
 
     .header-content {
       padding-top: 5rem;
+
+      h1 {
+        font-size: 2rem;
+      }
     }
 
     .showcase-buttons {
       display: none;
+    }
+  }
+
+  #about {
+    &-a {
+      display: block;
+
+      .about-img {
+        height: 50%;
+      }
+
+      .about-text {
+        height: 50%;
+        font-size: 1rem;
+
+        p {
+          font-size: 0.8rem;
+        }
+      }
     }
   }
 }
